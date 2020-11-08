@@ -1,4 +1,4 @@
-package assignment2;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -50,13 +50,13 @@ public class SQLdatabase {
 			Class.forName("com.mysql.cj.jdbc.Driver"); // dynamically load the driver's class file into memory, which automatically registers it
 
 			//STEP 3: Open a connection
-//			System.out.println("Connecting to database...");
+			System.out.println("Connecting to database...");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/" + database,username,password);
-//			System.out.println("Connected database successfully...");
+			System.out.println("Connected database successfully...");
 
-//			System.out.println("Creating statement...");
+			System.out.println("Creating statement...");
 			stmt = conn.createStatement(); // Creates a Statement object
-//			System.out.println("Statement created...");
+			System.out.println("Statement created...");
 
 			//STEP 4: Execute queries
 
@@ -66,7 +66,7 @@ public class SQLdatabase {
 			int buses = Integer.parseInt(NBus.getString("Nbus")); // <- buses in the system
 			int attributes = 2*buses; // <- attributes for each sample
 
-//			System.out.println("There is " + buses + " buses in the system and every sample has " + attributes + " attributes.");
+			System.out.println("There is " + buses + " buses in the system and every sample has " + attributes + " attributes.");
 
 
 			ResultSet measurementsTable = stmt.executeQuery("SELECT * FROM " + tableName + " ORDER BY time ASC, name ASC;");

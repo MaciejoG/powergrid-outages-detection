@@ -1,9 +1,11 @@
-package assignment2;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
+
+
 
 public class Main {
 
@@ -12,6 +14,7 @@ public class Main {
 
 		int K=4;
 		ArrayList<Sample> samples = SQLdatabase.getSamples("subtables", "root", "root", "measurements");
+		System.out.println(samples);
 		ArrayList<Sample> samplesTest = SQLdatabase.getSamples("subtables", "root", "root", "analog_values");
 		ArrayList<ClustSample> samplesClustered = new ArrayList<ClustSample>(); // <- we will store clustered (using kMean) samples here
 		ArrayList<ClustSample> samplesTestClustered = new ArrayList<ClustSample>(); // <- we will store clustered  (using kMean) test-samples here

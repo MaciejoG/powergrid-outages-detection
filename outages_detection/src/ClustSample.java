@@ -1,5 +1,3 @@
-package assignment2;
-
 public class ClustSample extends Sample {
 	
 	double[] distances;
